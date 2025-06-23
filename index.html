@@ -97,9 +97,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf"><b><i>J1-Bench</i></b></span> introduces <b><i>J1-Envs</i></b>, the first interactive and dynamic legal environment tailored for LLM-based agents, as well as a fine-grained evaluation framework, <b><i>J1-Eval</i></b>, that assesses both task performance and procedural compliance across varying levels of legal proficiency.
+        <span class="dnerf"><b><i>J1-Bench</i></b></span> introduces six legal environments, which could be categorized into three levels of environmental complexity: Level I covers <b>Knowledge Questioning</b> and <b>Legal Consultation</b>; Level II includes <b>Complaint Drafting</b> and <b>Defence Drafting</b>; Level III involves <b>Civil Court</b> and <b>Criminal Court</b>.
       </h2>
-      <iframe src="images/brief_framework.png" width="100%" height="600px"></iframe>
+      <iframe src="images/model.png" width="110%" height="518px"></iframe>
     </div>
   </div>
 </section>
@@ -114,15 +114,17 @@
           <p><b>Misalignment between current benchmarks and realistic legal services</b><br>
           </p><p>A reliable evaluation system that identifies the gap between current LLM-based and ideal legal agents is necessary for the study of legal intelligence. However, existing benchmarks predominantly adopt static and non-interactive paradigms, failing to capture the dynamic and professional nature of real-world legal practice, which puts emphasis on <b>multi-turn interactions</b> and <b>procedrual legality</b>. The misalignment limits the understanding of language agents' capabilities in legal contexts.<br>
           <!-- <p> Can we train a model that can decide when to retrieve, judges if retrieved passages are indeed helpful and generates conditioned on them? Can we build a reliable instruction-following LM that can provide citations?</p> -->
-          <p><b>Challenges in developing dynamic legal environment</b><br>
-          </p><p>Developing a system to mirror the real-world interplay of legal practitioners with evolving information and procedures faces two key challenges:
+          <p><b><i>J1-Envs:</i> open-ended legal environments of three levels of environmental complexity</b><br>
+          </p><p>To this end, we present <i>J1-Envs</i>, open-ended legal environments that simulate realistic legal scenarios, where agents engage in multi-turn interactions with dynamic procedural legality. According to environmental complexity(<i>role diversity</i>, <i>interaction demands</i>, and <i>procedural difficulty</i>), the sixi environments are categorized into three levels:
             <ul>
-              <li><span style="color: red">Level I ...</li>
-              <li><span style="color: red">Level II ...</li>
-              <li><span style="color: red">Level III ...</li>
+              <li><span><b>Level-I</b> comprises knowledge questioning and legal consultation, where the legal agent answers the public's progressive questions on legal knowledge or specific cases.</li>
+              <li><span><b>Level-II</b> involves complaint and defence drafting, where the legal agent provides step-by-step guidance to litigants in compliance with procedrual requirements, and systematically collects the necessary information to complete the drafting process.</li>
+              <li><span><b>Level-III</b> consists of civil and criminal courts: within formal judicial processes, the legal agent facilitates interactions among parties, ensures procedural compliance, and produces legally valid judgments.</li>
             </ul>
             <br>
           </p>
+          <p><b><i>J1-Eval:</i> task-specific and fine-grained metrics for agent capabilities evaluation</b><br>
+          </p><p>Furthermore, we introduce <i>J1-Eval</i> to evaluate agent capabilities within our constructed environments with <b>task-specific</b> and <b>fine-grained</b> metrics. Extensive experiments reveal that while current agents have internalized legal knowledge, they still struggle to follow procedrual steps when performing tasks in dynamic environments, even the SOTA model(GPT-4o) fails to surpass the average score of 60.<br>
         </div>
       </div>
     </div>
@@ -134,16 +136,13 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">J1Benchmark</h2>
+        <h2 class="title is-3"><i>J1-ENVS</i>: Interactive Legal Environments</h2>
         <!-- Interpolating. -->
         <!-- <h3 class="title is-4">Overall Model Performance</h3> -->
         <div class="content has-text-justified">
           <p>
-          <span style="color: red">J1Benchmark</span> 是………………
+          <span style="color: red"><i>J1-ENVS</i></span> encompasses six representative scenarios, which includes two parts: <b>(A) Role Agent Setting</b> leverages real-world legal sources and personality theories to construct different role agents; <b>(B) Multi-level Environment Construction</b> combines the various roles in specific procedures and relationships to form legal environments.
           </p>
-          简要介绍J1Benchmark是什么…………
-          放个总体框架图
-          <iframe src="images/overall_framework.png" width="100%" height="600px"></iframe>
         </div>
         <div class="columns is-vcentered interpolation-panel">
         </div>
@@ -151,28 +150,38 @@
         <div class="content has-text-justified">
           <h3 class="title is-4">Role Agent Setting</h3>
           <p>
-          对应正文Role Agent Setting部分
+          To simulate realistic legal scenarios, we extract different legal elements from real-world legal sources with GPT-4o. These elements are assigned to three levels of roles to mirror different groups of people seeking legal services: 
+          <ul>
+            <li><span><b><i>Type I: General Public</i></b> represents persons in various occupations, who seek knowledge-based or case-specific consultation.</li>
+            <li><span><b><i>Type II: Specific Characters</i></b> have more explicit litigation needs, and are assigned more detailed information.</li>
+            <li><span><b><i>Type III: Multi-specific Characters</i></b> hold specifc responsibilities within courtroom proceedings and are assigned real-world legal information corresponding to their roles.</li>
+          </ul>
           </p>
         </div>
         <div class="content has-text-justified">
           <h3 class="title is-4">Multi-level Environment Construction</h3>
           <p>
-          对应正文Multi-level Environment Construction部分
+          Building upon curated role sets, six representive legal environments are constructed and categorized into three levels by role diversity, interaction complexity, and preocedural depth.
           </p>
           <ul>
-            <li><span style="color: red">Level I ...</li>
-            <li><span style="color: red">Level II ...</li>
-            <li><span style="color: red">Level III ...</li>
+            <li><span><b>Level I: Knowledge Questioning(KQ) and Legal Consultation(LC).</b> This level involves two participants, where the general public initiates questions and the legal agent responds. The dialogue continues untill all questions are addressed. These scenarios aim to simulate the respons capabilities of the legal trainee in dynamic environments.</li>
+            <li><span><b>Level II: Complaint Drafting(CD) and Defence Drafting(DD).</b> This level involves two participants: an individual with a specific legal need(i.e., drafting a legal document, such as a complaint or a defence), and a legal agent who guides the interaction to progressive collect the required information and ultimately generate a legal document. These scenarios aim to simulate the progress by which a practicing lawyer independently initiates and completes tasks based on a given agenda.</li>
+            <li><span><b>Level III: Civil Court(CI) and Criminal Court(CR).</b> This level involves multiple participants and is governed by strict court procedural norms. Specifically, the judge agent oversees the courtroom process, which includes several stages, and guides other characters(Plaintiff's Lawyer & Defendant's Lawyer in Civil Court; Defendant & Lawyer, and the Procurator in Criminal Court) to reach a judgment.</li>
           </ul>
         </div>
         <div class="content has-text-justified">
-          <h3 class="title is-4"><i>J1-Eval:</i> Holistic Legal Agent Evaluation</h3>
-          <h4 class="title is-8">Data Details</h4>
+          <h2 class="title is-4"><i>J1-Eval:</i> Holistic Legal Agent Evaluation</h2>
           <p>
-          </p>数据构造方法
-          <p></p>
-          <h4 class="title is-8">Evaluation Metrics</h4>
-          各种评测指标
+          Given the distinct characteristics of each legal task, we design metrics accordingly.
+          </p>
+          <ul>
+            <li><b>Level I</b> is characterised by two types of metrics. For binary questions where outputs of legal agents are summarized as "yes" or "no", <b>binary accuracy(BIN)</b> measures their accuracy by matching method. For non-binary questions, we leverage an LLM-based evaluation method to rate the original response of legal agents on a scale of 1 to 10 to form <b>non-binary score(NBIN)</b>.</li>
+
+            <li><b>Level II</b> evaluates the quality of the generated legal doucument with two metrics: <b>Format-following score(FOR)</b> evaluates how closely the format of the generated legal document matches the reference. <b>Doucment score(DOC)</b> measures the average accuracy of each component of document with either matching or model-based method.</li>
+
+            <li><b>Level III</b> evaluates the quality of the final judgment and procedural compliance, with two metrics: <b>Procedural-following score(PFS)</b> evaluates completeness of procedural stages through matching. <b>Judgment score(JUD)</b> evaluates the judgment quality with either model-based evaluation in civil courts or calculate deviation span in criminal courts. <b>Reason score(REA)</b> evaluates the judge inference based on ground truth in terms of legal points, logic, and factual accuracy. <b>Law accuracy(LAW)</b> measures law accuracy by matching based on ground truth.</li> 
+          </ul>
+
         </div>
       </div></div></div></section>
       <section class="section">
@@ -185,52 +194,57 @@
               <br>
               <div class="content has-text-justified">
                 <h3 class="title is-4">Performance among Various Legal Agents</h3>
+                <h4 class = "title is-8">Overall Performance</h4>
                 <p>
-                主实验部分，表格也制成png图片
+                  GPT-4o achieves the best performance, showing strong legal intelligence. Qwen3-Instruct-32B demonstrates performance beyond expectations, surpassing Deepseek series. Although the legal-specific LLMs perform comparably to the GPT series on existing legal benchmarks, they exhibit significantly weaker performance in our setting, falling behind even smaller models.
+                </p>
+                <img src="images\total_performance.png" alt="Overall Ranking">
+                
+                
+                <h4 class ="title is-8">Performance at Level I, II, & III</h4>
+                <p>
+                  Both general and legal-specific models perform relatively well in Level I. However, their performance drop in Level II and level III, which requires proactive engagement and rigorous procedrual compliance.
                 </p>
                 <img src="images\main_result.png" alt="results">
 
-                <h4 class ="title is-8">Overall Performance</h4>
-                <img src="images\total_performance.png" alt="Overall Ranking">
                 
-                <h4 class="title is-8">Performance at Different Level</h4>
-
-                <h4 class="title is-8">Analysis of Interaction Turn</h4>
-                <img src="images\analysis_turn.png" alt="Interaction Turn">
-
-                <h4 class="title is-8">Analysis of LLMs-driven Environment and Evaluation</h4>
-                <h5 class="title is-8">Can LLMs drive the <i>J1-Envs</i>?</h5> 
-                <p>NPC表现评估</p>
-                <img src="images\Different_NPC.png" alt="Different NPC">
-                <h5 class="title is-8">Can LLMs serve as a fair evaluator?</h5>
-                <p>NPC打分效果评估</p>
+                <h3 class="title is-8">Can LLMs drive <i>J1-ENVS</i>?</h3>
+                <img src="images\behavioral_consistency.png" alt="Different NPC">
+                <p>
+                  Both GPT-4o and human rate the consistency between each role's profile and its behavior on a scale of 1 to 10. The ratings remain consistently high and stable, which validates the reliability and effectiveness of our environment. We then employ Qwen3-Instruct-32B to drive our environment, and find that the relative performance differences and rankings among agents remain consistent across various environments, further validating the robustness of our framework.
+                </p>
+                
                 <img src="images\evaluation_evaluation_png.png" alt="Evaluation NPC">
-
-              </div>
-              
-              <div class="content has-text-justified">
-                结论
-              </div>
-
-              <div class="content has-text-justified">
-
-                <h3 class="title is-4">Additional Experiment</h3>
-                辅助实验
-                <h4 class="title is-8">Analysis of Dialogue Turn Constraints on Simulated Courts Performance</h4>
-                <p>模拟法庭最大轮数的限制</p>
-                <img src="images\turn_impact_civil_png.png" alt="Turn Impact on Civil Court">
-                <img src="images\turn_impact_criminal_png.png" alt="Turn Impact on Criminal Court">
-
-
-                <h4 class="title is-8">Fine-grained Analysis of Procedural-Following Ability</h4>
-                <p>不同模型在程序遵循能力上的细致表现</p>
-                <img src="images\heatmap_civil.png" alt="Procedural Following Ability Civil">
-                <img src="images\heatmap_criminal.png" alt="Procedural Following Ability Criminal">
+                <h3 class="title is-8">Can LLMs serve as a fair evaluator?</h4>
+                <p>
+                  Both GPT-4o and human evaluators rate the result for a specific metric. Their scores largely(over 76%) remain consistent, and GPT-4o tends to rate lower scores than human evaluators. These results demonstrate the reliability and robustness of our evaluation framework, which enhances the validity of our findings about legal agents.
+                </p>
 
               </div>
               
             </div></div></div></section>
       
+      <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-3">Conclusion</h2>
+              <p>
+                <ul>
+                  <li><b>(A)</b> This study introduces the first interactive and dynamic legal environment for agents. Our <b><i>J1-ENVS</i></b> covers six of the most representative real-world scenarios in Chinese legal practice.</li>
+      
+                  <li><b>(B)</b> We introduce <b><i>J1-EVAL</i></b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge.</li>
+      
+                  <li><b>(C)</b> Experimental results reveal gaps between diverse agents and real-world legal demands, offering valuable insights to guide future progress.</li>
+                  
+                  <li><b>(D)</b> This work introduces a new paradigm for legal intelligence by shifting the focus from static evaluation to dynamic interaction. Beyond evaluation, it can further be extended for data generation and reinforcement learning training.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
