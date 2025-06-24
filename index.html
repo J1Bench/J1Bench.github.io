@@ -91,14 +91,14 @@
             <span class="author-block">
               <a href="https://akariasai.github.io/">Zheng Jia</a><sup>1†</sup></span>
             <span class="author-block">
-              <a href="https://yueshengbin.github.io/">Shengbin Yue</a><sup>1†</sup></span>
+              <a href="https://ellenmellon.github.io/">Shengbin Yue</a><sup>1†</sup></span>
           </div>
           <div class = "is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://homes.cs.washington.edu/~yizhongw/">Wei Chen</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://siyuanwangw.github.io/">Siyuan Wang</a><sup>4</sup>,
+              <a href="https://research.ibm.com/people/avi-sil">Siyuan Wang</a><sup>4</sup>,
             </span>
             <span class="author-block">
               <a href="https://homes.cs.washington.edu/~hannaneh/">Yidong Liu</a><sup>5</sup>,
@@ -107,7 +107,7 @@
               <a href="https://homes.cs.washington.edu/~hannaneh/">Yun Song</a><sup>6*</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.fudan-disc.com/people/zywei">Zhongyu Wei</a><sup>12*</sup>,
+              <a href="https://homes.cs.washington.edu/~hannaneh/">Zhongyu Wei</a><sup>12*</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
@@ -181,7 +181,7 @@
           <h4>
           <p><b><i>J1-Envs:</i> Interactive Legal Environments</b><br>
           </h4>
-          </p><p>We present <i>J1-Envs</i> with six environments, which could be categorized into three levels based on environmental complexity:
+          </p><p>We present <i>J1-Envs</i> with six environments, which could be categorized into three levels based on environmental complexity (<i>role diversity</i>, <i>interaction demands</i>, and <i>procedural difficulty</i>):
             <ul>
               <li><span><b>Level-I: Knowledge Questioning & Legal Consultation</b>. This level involves two participants, where the general public of various occupations initiates progressive questions and the legal agent responds. The dialogue continues untill all questions are addressed.</li>
               <li><span><b>Level-II: Complaint Drafting & Defence Drafting</b>. This level involves two participants: an individual with a specific legal need, and a legal agent who guides the interaction to progressive collect the required information and ultimately generate a legal document.</li>
@@ -197,7 +197,6 @@
     <!--/ Abstract. -->
 </div></section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -207,10 +206,10 @@
         <div class="content has-text-justified">
           <p>In general, the contributions of our paper are as follows:</p>
           <ul>
-            <li><span><b><i>J1-ENVS</i>:</b> We introduce the first interactive and dynamic legal environment for agents. Our <b><i>J1-ENVS</i></b> covers six of the most representative real-world scenarios in Chinese legal practice.</li>
-            <li><span><b><i>J1-EVAL</i>:</b> We introduce <b><i>J1-EVAL</i></b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge.</li>
-            <li><span><b>Insights for future progress:</b> Experimental results reveal gaps between diverse agents and real-world legal demands, offering valuable insights to guide future progress.</li>
-            <li><span><b>New paradigm for legal intelligence:</b> This work introduces a new paradigm for legal intelligence, shifting from static to dynamic. Beyond evaluation, it can further be extended for data generation and reinforcement learning training.</li>
+            <li><span> We introduce <b>J1-ENVS</b>, the first interactive and dynamic legal environment for agents, encompassing six representative real-world scenarios from Chinese legal practice. It provides an open-ended platform where agents engage in diverse legal tasks.</li>
+            <li><span> We introduce <b>J1-EVAL</b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge. It give a deeper understanding of the skill sets required for legal task exe-cution and offer a realistic and reliable overview of agent capabilities</li>
+            <li><span> Experimental results reveal gaps between diverse agents and real-world legal demands, offering valuable insights to guide future progress.</li>
+            <li><span> This work introduces a new paradigm for legal intelligence, shifting from static to dynamic. Beyond evaluation, it can further be extended for data generation and reinforcement learning training.</li>
           </ul>
         </div>
       </div>
@@ -218,6 +217,21 @@
     <!--/ Abstract. -->
 </div></section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><b>Datasets</b></h2>
+        <div class="content has-text-justified">
+          <b><i>J1-EVAL</i></b> sets out 508 distinct environments, including 160 at Level I, 186 at Level II, and 192 at Level III, encompassing a diverse and nuanced set of legal attributes aligned with real-wolrd legal practice.
+          <br><br><br>
+          <img src="images/concentric_1.jpg" style="max-width: 100%; height: auto;" />
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div></section>
 
       <section class="section">
         <div class="container is-max-desktop">
@@ -299,21 +313,34 @@
           <h2>Related Work</h2>
           <div class="box">
             <div class="content has-text-justified">
-              <a href="https://arxiv.org/abs/2309.11325">DISC-LawLLM: Fine-tuning Large Language Models for Intelligent Legal Services</a>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-97-5569-1_19">LawLLM: Intelligent Legal System with Legal Reasoning and Verifiable Retrieval</a>
               <br>
-              - Shengbin Yue, Wei Chen, Siyuan Wang, Bingxuan Li, Chenchen Shen, Shujun Liu, Yuxuan Zhou, Yao Xiao, Song Yun, Xuanjing Huang, Zhongyu Wei
+              - Shengbin Yue, Shujun Liu, Yuxuan Zhou, Chenchen Shen, Siyuan Wang, Yao Xiao, Bingxuan Li, Yun Song, Xiaoyu Shen, Wei Chen, Xuanjing Huang, Zhongyu Wei 
               <br>
               <br>
+              
+              <a href="https://aclanthology.org/2025.findings-naacl.365.pdf">Multi-Agent Simulator Drives Language Models for Legal Intensive Interaction</a>
+              <br>
+               - Shengbin Yue, Ting Huang, Zheng Jia, Siyuan Wang, Shujun Liu, Yun Song, Xuanjing Huang, Zhongyu Wei
+              <br>
+              <br>
+
+              <a href="https://arxiv.org/abs/2402.09742">AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator</a>
+              <br>
+              - Zhihao Fan, Jialong Tang, Wei Chen, Siyuan Wang, Zhongyu Wei, Jun Xi, Fei Huang, Jingren Zhou
+              <br>
+              <br>
+
+              <a href="https://arxiv.org/abs/2410.19346">AgentSense: Benchmarking Social Intelligence of Language Agents through Interactive Scenarios</a>
+              <br>
+              - Xinyi Mou, Jingcong Liang, Jiayu Lin, Xinnong Zhang, Xiawei Liu, Shiyue Yang, Rong Ye, Lei Chen, Haoyu Kuang, Xuanjing Huang, Zhongyu Wei
+              <br>
+              <br>
+
               <a href="https://arxiv.org/abs/2309.16289">LawBench: Benchmarking Legal Knowledge of Large Language Models</a>
               <br>
               - Zhiwei Fei, Xiaoyu Shen, Dawei Zhu, Fengzhe Zhou, Zhuo Han, Songyang Zhang, Kai Chen, Zongwen Shen, Jidong Ge
-              <br>
-              <br>
-              <a href="https://arxiv.org/abs/2502.06882">Multi-Agent Simulator Drives Language Models for Legal Intensive Interaction</a>
-              <br>
-               - Shengbin Yue, Ting Huang, Zheng Jia, Siyuan Wang, Shujun Liu, Yun Song, Xuanjing Huang, Zhongyu Wei
-              
-
+            
             </div>
           </div>
         </div>
