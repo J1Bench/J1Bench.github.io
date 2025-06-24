@@ -181,7 +181,7 @@
           <h4>
           <p><b><i>J1-Envs:</i> Interactive Legal Environments</b><br>
           </h4>
-          </p><p><i>J1-Envs</i> consists of six environments and be categorized into three levels based on environmental complexity (<i>role diversity</i>, <i>interaction demands</i>, and <i>procedural difficulty</i>):
+          </p><p>We present <i>J1-Envs</i> with six environments, which could be categorized into three levels based on environmental complexity (<i>role diversity</i>, <i>interaction demands</i>, and <i>procedural difficulty</i>):
             <ul>
               <li><span><b>Level-I: Knowledge Questioning & Legal Consultation</b>. This level involves two participants, where the general public of various occupations initiates progressive questions and the legal agent responds. The dialogue continues untill all questions are addressed.</li>
               <li><span><b>Level-II: Complaint Drafting & Defence Drafting</b>. This level involves two participants: an individual with a specific legal need, and a legal agent who guides the interaction to progressive collect the required information and ultimately generate a legal document.</li>
@@ -190,7 +190,7 @@
           <h4>
           <p><b><i>J1-Eval:</i> Holistic Legal Agent Evaluation</b><br>
           </h4>
-          </p><p>We introduce <b>J1-EVAL</b>, a set of <b>task-specific</b> and <b>fine-grained</b> metrics, to evaluate agent capabilities within our constructed environments with either rule-based or model-based methods.<br>
+          </p><p>We introduce <b>J1-EVAL</b>, a set of <b>task-specific</b> and <b>fine-grained</b> metrics, to evaluate agent capabilities within our constructed environments with either rule-based or model-based method.<br>
         </div>
       </div>
     </div>
@@ -206,10 +206,10 @@
         <div class="content has-text-justified">
           <p>In general, the contributions of our paper are as follows:</p>
           <ul>
-            <li><span> We present <b>J1-ENVS</b>, the first interactive and dynamic legal environment for agents, encompassing six representative real-world scenarios from Chinese legal practice. It provides an open-ended platform where agents engage in diverse legal tasks.</li>
-            <li><span> We introduce <b>J1-EVAL</b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge. It gives a deeper understanding of the skill sets required for legal task execution and offers a realistic and reliable overview of agent capabilities</li>
+            <li><span> We introduce <b>J1-ENVS</b>, the first interactive and dynamic legal environment for agents, encompassing six representative real-world scenarios from Chinese legal practice. It provides an open-ended platform where agents engage in diverse legal tasks.</li>
+            <li><span> We introduce <b>J1-EVAL</b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge. It give a deeper understanding of the skill sets required for legal task exe-cution and offer a realistic and reliable overview of agent capabilities</li>
             <li><span> Experimental results reveal gaps between diverse agents and real-world legal demands, offering valuable insights to guide future progress.</li>
-            <li><span> This work introduces a new paradigm for legal intelligence, <b>shifting from static to dynamic<b>. Beyond evaluation, it can further be extended for data generation and reinforcement learning training.</li>
+            <li><span> This work introduces a new paradigm for legal intelligence, shifting from static to dynamic. Beyond evaluation, it can further be extended for data generation and reinforcement learning training.</li>
           </ul>
         </div>
       </div>
@@ -301,7 +301,31 @@
               </div>
               
             </div></div></div></section>
-      
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><b>Conclusions</b></h2>
+        <div class="content has-text-justified">
+          In our work, we introduce <b><i>J1-ENVS</i></b>, interactive and dynamic legal environments where legal agents engage in multi-turn dialogue with other characters to complete specific environment tasks.
+
+          Building on this, we reveal that: 
+          <ul>
+            <li><span><b>(A)</b> Despite posessing legal knowledge, the absence of interactive capability and specialized training in legal context hampers legal agents' effectiveness in dynamic, real-world environments. </li>
+            <li><span><b>(B)</b> Despite simpler procedural settings, navigating through the criminal court poses greater challenges than the civil court for legal agents, as the criminal court consists of more characters, which indicates that the training of multi-turn interaction skill should be expanded to multi-characters settings.</li>
+            <li><span><b>(C)</b> The inference and procedural-following capabilities of the legal agent is positively correlated with the accuracy of model prediction, as the legal agent would acquire and utilize information from multi-turn dialogue more efficiently.</li>
+            <li><span><b>(D)</b> During the civil court session, capabilities of several models have shown non-monotonic, U-shaped replationship with the number of dialogue turns, characterized by an initial increase followed by a decrease, indicating targeted training for extended dialogue is required for the further improvement of legal agents.</li>
+          </ul>
+          
+           
+          <br><br><br>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div></section>
 
 
 <section class="section">
