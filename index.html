@@ -91,14 +91,14 @@
             <span class="author-block">
               <a href="https://akariasai.github.io/">Zheng Jia</a><sup>1†</sup></span>
             <span class="author-block">
-              <a href="https://ellenmellon.github.io/">Shengbin Yue</a><sup>1†</sup></span>
+              <a href="https://yueshengbin.github.io/">Shengbin Yue</a><sup>1†</sup></span>
           </div>
           <div class = "is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://homes.cs.washington.edu/~yizhongw/">Wei Chen</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://research.ibm.com/people/avi-sil">Siyuan Wang</a><sup>4</sup>,
+              <a href="https://siyuanwangw.github.io/">Siyuan Wang</a><sup>4</sup>,
             </span>
             <span class="author-block">
               <a href="https://homes.cs.washington.edu/~hannaneh/">Yidong Liu</a><sup>5</sup>,
@@ -107,7 +107,7 @@
               <a href="https://homes.cs.washington.edu/~hannaneh/">Yun Song</a><sup>6*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~hannaneh/">Zhongyu Wei</a><sup>12*</sup>,
+              <a href="http://www.fudan-disc.com/people/zywei">Zhongyu Wei</a><sup>12*</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
@@ -164,7 +164,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <div><span class="dnerf"><b><i>J1-ENVS</i></b>, the first interactive and dynmaic legal environments where LLM-based legal agents engage in diverse legal scenarios, completing tasks through interaction with varied participants under procedural norms.</span></div>
+        <div><span class="dnerf"><b><i>J1-ENVS</i></b> is an interactive and comprehensive legal benchmark where LLM agents engage in diverse legal scenarios, completing tasks through interactions with various participants under procedural rules.</span></div>
       </h2>
       <img src="images/model_1.png" style="max-width: 100%; height: auto;" />
     </div>
@@ -190,7 +190,7 @@
           <h4>
           <p><b><i>J1-Eval:</i> Holistic Legal Agent Evaluation</b><br>
           </h4>
-          </p><p>We introduce <b>J1-EVAL</b>, a set of <b>task-specific</b> and <b>fine-grained</b> metrics, to evaluate agent capabilities within our constructed environments with either rule-based or model-based method.<br>
+          </p><p> It provides a set of <b>task-specific</b> and <b>fine-grained</b> metrics to evaluate agent capabilities within our constructed environments with either rule-based or model-based methods.<br>
         </div>
       </div>
     </div>
@@ -204,7 +204,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3"><b>Contributions</b></h2>
         <div class="content has-text-justified">
-          <p>In general, the contributions of our paper are as follows:</p>
+          <p>The contributions of our paper are as follows:</p>
           <ul>
             <li><span> We introduce <b>J1-ENVS</b>, the first interactive and dynamic legal environment for agents, encompassing six representative real-world scenarios from Chinese legal practice. It provides an open-ended platform where agents engage in diverse legal tasks.</li>
             <li><span> We introduce <b>J1-EVAL</b> to perform fine-grained evaluation of agents across different levels of legal proficiency, ranging from trainee to lawyer to judge. It give a deeper understanding of the skill sets required for legal task exe-cution and offer a realistic and reliable overview of agent capabilities</li>
@@ -309,14 +309,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3"><b>Conclusions</b></h2>
         <div class="content has-text-justified">
-          In our work, we introduce <b><i>J1-ENVS</i></b>, interactive and dynamic legal environments where legal agents engage in multi-turn dialogue with other characters to complete specific environment tasks.
-
-          Building on this, we reveal that: 
           <ul>
-            <li><span><b>(A)</b> Despite posessing legal knowledge, the absence of interactive capability and specialized training in legal context hampers legal agents' effectiveness in dynamic, real-world environments. </li>
-            <li><span><b>(B)</b> Despite simpler procedural settings, navigating through the criminal court poses greater challenges than the civil court for legal agents, as the criminal court consists of more characters, which indicates that the training of multi-turn interaction skill should be expanded to multi-characters settings.</li>
-            <li><span><b>(C)</b> The inference and procedural-following capabilities of the legal agent is positively correlated with the accuracy of model prediction, as the legal agent would acquire and utilize information from multi-turn dialogue more efficiently.</li>
-            <li><span><b>(D)</b> During the civil court session, capabilities of several models have shown non-monotonic, U-shaped replationship with the number of dialogue turns, characterized by an initial increase followed by a decrease, indicating targeted training for extended dialogue is required for the further improvement of legal agents.</li>
+            <li><span><b>(A)</b> Although current LLM agents have internalized legal knowledge, they struggle to maintain flexible interactive capabilities while adhering to rules, which limits their effectiveness in dynamic real-world environments. While legal intelligence improves with model size, even SOTA models average below 60, highlighting ongoing challenges in handling diverse and complex legal scenarios. </li>
+            <li><span><b>(B)</b> In complex courtroom proceedings, the legal agent’s capacity for sound legal reasoning and procedural compliance is fundamental to the accuracy and reliability of judicial outcomes.</li>
+            <li><span><b>(C)</b> Although criminal court procedures are not necessarily more complex than those in civil courts, legal agents face greater challenges in criminal courts due to the involvement of more roles. Therefore, enhancing multi-role interaction and communication is crucial for agents.</li>
           </ul>
           
            
